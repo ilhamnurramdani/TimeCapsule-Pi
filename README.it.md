@@ -1,4 +1,4 @@
-# TimeCapsuleRPi - Time Machine su Raspberry Pi 4
+# TimeCapsule-Pi - Time Machine su Raspberry Pi 4
 
 ## 🎯 Obiettivo
 

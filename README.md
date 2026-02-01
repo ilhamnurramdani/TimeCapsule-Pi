@@ -1,4 +1,4 @@
-# TimeCapsuleRPi - Turn your Raspberry Pi into a Time Machine Server
+# TimeCapsule-Pi - Turn your Raspberry Pi into a Time Machine Server
 
 A complete, production-ready solution to transform a Raspberry Pi 4 into a **Time Machine backup server** for macOS, replacing the need for an expensive Apple Time Capsule.
 
@@ -48,8 +48,8 @@ A complete, production-ready solution to transform a Raspberry Pi 4 into a **Tim
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/rizal72/TimeCapsuleRPi.git
-   cd TimeCapsuleRPi
+   git clone https://github.com/rizal72/TimeCapsule-Pi.git
+   cd TimeCapsule-Pi
    ```
 
 2. **Connect your external drive** to the Raspberry Pi
@@ -183,7 +183,7 @@ Then add them to `valid users` in `/etc/samba/smb.conf`.
 ## Project Structure
 
 ```
-TimeCapsuleRPi/
+TimeCapsule-Pi/
 ├── README.md              # This file
 ├── README.it.md           # Italian documentation
 ├── CLAUDE.md              # AI assistant guidelines

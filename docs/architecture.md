@@ -1,6 +1,6 @@
 # Architecture Documentation
 
-This document provides a deep dive into the technical architecture of TimeCapsuleRPi, explaining how each component works together to provide Time Machine functionality on Raspberry Pi.
+This document provides a deep dive into the technical architecture of TimeCapsule-Pi, explaining how each component works together to provide Time Machine functionality on Raspberry Pi.
 
 ## Table of Contents
 

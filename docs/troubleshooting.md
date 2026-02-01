@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-This guide covers common issues and their solutions when setting up and running TimeCapsuleRPi.
+This guide covers common issues and their solutions when setting up and running TimeCapsule-Pi.
 
 ## Table of Contents
 
